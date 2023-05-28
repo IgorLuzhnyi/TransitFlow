@@ -1,29 +1,11 @@
-import {
-  Container,
-  Grid,
-  Box,
-  Typography,
-  Stack,
-  IconButton,
-} from "@mui/material";
+import { Container, Grid, Typography, Stack } from "@mui/material";
 import IconLogo from "../../assets/IconLogo/IconLogo";
+import { optionsData } from "../reused components/ContactOptions";
+import { ContactOption } from "../reused components/ContactOptions";
 
 const Header = () => {
-  const HeaderOption = () => {
-    return (
-      <Stack>
-        <IconButton></IconButton>
-        <Box>
-          <Typography></Typography>
-          <Typography></Typography>
-        </Box>
-      </Stack>
-    );
-  };
-
   return (
     <Container
-      disableGutters
       maxWidth="xl"
       sx={{ backgroundColor: "primary.main", color: "#fff" }}
     >
@@ -31,7 +13,7 @@ const Header = () => {
         <Grid container columns={6}>
           <Grid
             item
-            lg={2}
+            lg={1}
             sx={{ display: "flex", justifyContent: "flex-start" }}
           >
             <Stack direction="row" sx={{ alignItems: "center" }}>
@@ -41,11 +23,13 @@ const Header = () => {
           </Grid>
           <Grid
             item
-            lg={4}
+            lg={5}
             sx={{ display: "flex", justifyContent: "flex-end" }}
           >
-            <Stack direction="row">
-              lg=4lg=4lg=4lg=4lg=4lg=4lg=4lg=4lg=4lg=4lg=4lg=4
+            <Stack direction="row" spacing={6}>
+              {optionsData.map((option, index) => (
+                <ContactOption key={index} data={option} />
+              ))}
             </Stack>
           </Grid>
         </Grid>

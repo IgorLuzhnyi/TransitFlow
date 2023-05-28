@@ -4,7 +4,7 @@ export const theme = createTheme({
   breakpoints: {
     values: {
       xl: 1920,
-      lg: 1200,
+      lg: 1280,
       md: 960,
       sm: 600,
       xs: 0,
@@ -12,7 +12,9 @@ export const theme = createTheme({
   },
   palette: {
     primary: {
+      veryLight: "#273270",
       light: "#1f2a69",
+      lightTwo: "#111C55",
       main: "#091242",
       dark: "#1c1f35",
     },
@@ -33,7 +35,6 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontSize: 16,
     fontFamily: "'Rubik',sans-serif",
     h1: {
       fontSize: 50,
@@ -53,6 +54,14 @@ export const theme = createTheme({
     },
     h6: {
       fontSize: 20,
+    },
+    small: {
+      fontSize: 14,
+      fontWeight: 100,
+    },
+    regular: {
+      fontSize: 16,
+      fontWeight: 100,
     },
   },
 });
